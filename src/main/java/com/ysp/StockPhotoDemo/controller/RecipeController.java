@@ -15,11 +15,11 @@ public class RecipeController {
         this.recipeService = recipeService;
     }
 
-    @GetMapping("recipe-create")
-    public String createRecipe(@RequestParam String ingredients,
-                               @RequestParam(defaultValue = "any") String cuisine,
-                               @RequestParam(defaultValue = "none") String diet
+    @GetMapping("/recipe-create")
+    public String createRecipe(@RequestParam(name = "ingredients") String ingredients,
+                               @RequestParam(name = "cuisine", defaultValue = "any") String cuisine,
+                               @RequestParam(name = "dietaryRestrictions", defaultValue = "none") String dietaryRestrictions
                                ){
-        return recipeService.createRecipe(ingredients, cuisine, diet);
+        return recipeService.createRecipe(ingredients, cuisine, dietaryRestrictions);
     }
 }

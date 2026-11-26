@@ -23,6 +23,6 @@ public class ChatController {
 
     @GetMapping("/ask-ai-options")
     public String getResponseOptions(@RequestParam String prompt){
-        return chatService.getResponseOptions(prompt);
+        return chatService.getResponseOptions( prompt);
     }
 }

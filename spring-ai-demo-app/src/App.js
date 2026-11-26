@@ -16,7 +16,7 @@ function App() {
       onClick={() => handleTabChang('image-generator')}>Image Generator</button>
 
       <button className={activeTab === 'chat' ? 'active' : ''}
-       onClick={() => handleTabChang('chat')}>Chat</button>
+       onClick={() => handleTabChang('chat')}>Ask AI</button>
 
       <button className={activeTab === 'recipe-generator' ? 'active' : ''}
       onClick={() => handleTabChang('recipe-generator')}>Recipe Generator</button>
